@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <math.h>
+int n,m;
+
+void checkbill()
+{
+	scanf_s("%d",&n);
+	if(n%4==0)
+	{
+		int o;
+		o=3*(n/4);
+		m=249*o;
+		printf("Your total = %d",m);
+	}
+	else
+	{
+		int o,p;
+		o=3*(n/4);
+		p=(n%4);
+		m=249*(o+p);
+		printf("Your total = %d bath",m);
+	}
+}
+
+
+main()
+{
+	checkbill();
+	return 0;
+}
