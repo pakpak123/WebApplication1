@@ -1,0 +1,27 @@
+#include <stdio.h>
+void memo(int*);
+main()
+{
+	int i;
+	scanf_s("%d",&i);
+	if(i>0)
+	{
+		memo(&i);
+		printf("%d",i);
+	}
+	else 
+	{
+		printf("0");     //0=fause --> i is not a positive integer
+	}
+	return 0;
+}
+
+void memo(int * i)
+{
+	int n,num;
+	for(num=*i; num>0 ;num--)
+	{
+		n += num;
+	}
+	*i = n;
+}
